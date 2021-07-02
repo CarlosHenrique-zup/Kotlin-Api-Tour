@@ -22,10 +22,11 @@ class PromocaoController {
     lateinit var promocaoService: PromocaoService
 
     @GetMapping()
-    fun getAll(@RequestParam(required = false, defaultValue = "0") start: Int,
-               @RequestParam(required = false, defaultValue = "3") size: Int
+    fun getAll(
+        @RequestParam(required = false, defaultValue = "0") start: Int,
+        @RequestParam(required = false, defaultValue = "3") size: Int
     ): ResponseEntity<List<Promocao>> {
-        val listPromocoes = this.promocaoService.getAll(start,size)
+        val listPromocoes = this.promocaoService.getAll(start, size)
         var status = if (listPromocoes.size == 0) HttpStatus.NOT_FOUND else HttpStatus.OK
         return ResponseEntity(listPromocoes, status)
     }

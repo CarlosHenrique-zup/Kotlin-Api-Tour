@@ -6,5 +6,5 @@ import org.springframework.data.repository.PagingAndSortingRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface PromocaoRepository: PagingAndSortingRepository<Promocao, Long> {
+interface PromocaoRepository : PagingAndSortingRepository<Promocao, Long> {
 }

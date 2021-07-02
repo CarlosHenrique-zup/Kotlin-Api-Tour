@@ -24,7 +24,7 @@ class SwaggerConfig {
             .apiInfo(metaData())
 
     private fun metaData() =
-       ApiInfoBuilder()
+        ApiInfoBuilder()
             .title("API DE LOJA ACME")
             .description("API QUE POSSUI TODOS OS METODOS DA LOJA")
             .version("1.0.0")

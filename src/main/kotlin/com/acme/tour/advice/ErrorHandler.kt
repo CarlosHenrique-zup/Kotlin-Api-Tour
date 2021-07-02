@@ -14,11 +14,20 @@ import javax.servlet.http.HttpServletResponse
 @ControllerAdvice
 class ErrorHandler {
     @ExceptionHandler(JsonParseException::class)
-    fun JsonExceptionHandler(servletRequest: HttpServletRequest, servletResponse: HttpServletResponse, exception: Exception): ResponseEntity<ErrorMessage>{
+    fun JsonExceptionHandler(
+        servletRequest: HttpServletRequest,
+        servletResponse: HttpServletResponse,
+        exception: Exception
+    ): ResponseEntity<ErrorMessage> {
         return ResponseEntity(ErrorMessage("JSON_ERROR", exception.message ?: "invalid json"), HttpStatus.BAD_REQUEST)
     }
+
     @ExceptionHandler(PromocaoNotFoundException::class)
-    fun PromocaoNotFoundExceptionHandler(servletRequest: HttpServletRequest, servletResponse: HttpServletResponse, exception: Exception): ResponseEntity<ErrorMessage>{
+    fun PromocaoNotFoundExceptionHandler(
+        servletRequest: HttpServletRequest,
+        servletResponse: HttpServletResponse,
+        exception: Exception
+    ): ResponseEntity<ErrorMessage> {
         return ResponseEntity(ErrorMessage("Promoção Não Localizada", exception.message!!), HttpStatus.NOT_FOUND)
     }
 

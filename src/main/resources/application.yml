@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tour?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: root
+    password: root
+    initialization-mode: always
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true

@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "2f638b98-91d5-45f5-8ec3-e0f504530345",
+		"name": "Acme Tour",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Nova Promocao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"descricao\": \"Viagem de Natal\",\r\n    \"local\": \"Campos do Jordão\",\r\n    \"isAllInclusive\": false,\r\n    \"qtdDias\": 3,\r\n    \"preco\" : 500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/promocoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promocoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/promocoes?localFilter=Gram",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promocoes"
+					],
+					"query": [
+						{
+							"key": "localFilter",
+							"value": "Gram"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAll com paginacao",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/promocoes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promocoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Promocao By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/promocoes/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promocoes",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Promocoes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/promocoes/133",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promocoes",
+						"133"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update promocao",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 1,\r\n    \"descricao\": \"Viagem\",\r\n    \"local\": \"Campos do Jordão\",\r\n    \"isAllInclusive\": false,\r\n    \"qtdDias\": 3,\r\n    \"preco\" : 550.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/promocoes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"promocoes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ordenados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}

@@ -10,7 +10,7 @@ As tecnologias que eu utilizei durante o curso foram:
 
 - JDK 8
 
-- MySql 
+- MySql WorkBench 8.0
 
 - Intelij 2021.1.3 Comunity Version
 
@@ -21,7 +21,7 @@ As tecnologias que eu utilizei durante o curso foram:
 #### Advice:
 - ErroHandler
 
-#### Controller
+#### Controller:
 - PromocaoController
 
 #### Model:

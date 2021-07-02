@@ -21,12 +21,12 @@ As tecnologias que eu utilizei durante o curso foram:
 #### Advice:
 - ErroHandler
 
-#### Controller:
+#### Controller
 - PromocaoController
 
 #### Model:
-- ErrorMessage:
-- Promocao:
+- ErrorMessage
+- Promocao
 - RespostaJSON
 
 #### Repository:

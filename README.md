@@ -35,6 +35,10 @@ As tecnologias que eu utilizei durante o curso foram:
 #### Exception:
 - PromocaoNotFoundException
 
+#### Service:
+- PromocaoService
+- PromocaoServiceImpl
+
 ## Payload / Body
 
 #### Nova Promocao

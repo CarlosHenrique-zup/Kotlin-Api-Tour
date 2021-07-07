@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
-import org.springframework.web.multipart.support.AbstractMultipartHttpServletRequest
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
@@ -28,7 +27,7 @@ class ErrorHandler {
         servletResponse: HttpServletResponse,
         exception: Exception
     ): ResponseEntity<ErrorMessage> {
-        return ResponseEntity(ErrorMessage("Promoção Não Localizada", exception.message!!), HttpStatus.NOT_FOUND)
+        return ResponseEntity(ErrorMessage("Promoção Não Localizada", exception.message?: "invalid json"), HttpStatus.NOT_FOUND)
     }
 
 }

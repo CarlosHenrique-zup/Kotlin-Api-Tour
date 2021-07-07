@@ -1,0 +1,35 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=tour
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    ports:
+      - 3307:3306
+#  mysql-tour:
+#    image: carloshenriquefsantos/tour_web:1.0.0
+#    environment:
+#      - MYSQL_ROOT_HOST=%
+#      - MYSQL_DATABASE=tour
+#      - MYSQL_USER=root
+#      - MYSQL_PASSWORD=root
+#      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+#    ports:
+#      - "8080:3306"
+#
+#  springboot-docker-container:
+#    image: springboot-docker-container
+#    ports:
+#      - "8082:8082"
+#    environment:
+#      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-tour:3306/tour?autoReconnect=true&useSSL=false
+#      SPRING_DATASOURCE_USERNAME: "root"
+#      SPRING_DATASOURCE_PASSWORD: "root"
+#    build:
+#      context: "./"
+#      dockerfile: "DockerFile"
+#    depends_on:
+#      - mysql-tour
